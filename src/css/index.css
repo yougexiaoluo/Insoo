@@ -1,15 +1,12 @@
-@charset "utf-8";
-
+@charset "UTF-8";
 html {
   box-sizing: border-box;
   /* 1 */
   font-family: sans-serif;
-  // font-size基础值
   font-size: 62.5%;
 }
 
 body {
-  // 重置font-size基础值
   font-size: 1.6rem;
 }
 
@@ -22,7 +19,6 @@ body {
 /**
  * Removes the default spacing and border for appropriate elements.
  */
-
 dt,
 dl,
 dd,
@@ -54,21 +50,17 @@ button {
   padding: 0;
 }
 
-// 对齐方式 ⭐
 img {
   vertical-align: middle;
   border: 0 none;
 }
 
-// 清除a标签默认样式
 a {
-  // 移动端点击背景高亮
   -webkit-tap-highlight-color: transparent;
   color: #000;
   text-decoration: none;
 }
 
-// 重置npuy 默认样式
 input,
 textarea {
   outline: none;
@@ -79,7 +71,6 @@ textarea {
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
  */
-
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
@@ -102,8 +93,6 @@ ul {
   padding: 0;
 }
 
-// html5新增的元素设置为display：block;
-
 figure,
 header,
 nav,
@@ -115,29 +104,21 @@ footer {
   display: block;
 }
 
-
-
-
-
 /*
   工具类  Start
 */
-
-// 清除浮动 
 .clearfix {
   zoom: 1;
 }
 
 .clearfix:after {
-  content: '';
+  content: "";
   clear: both;
   display: block;
   height: 0;
   visibility: hidden;
   overflow: hidden;
 }
-
-// 对齐方式  
 
 .tl {
   text-align: left;
@@ -163,8 +144,6 @@ footer {
   vertical-align: bottom;
 }
 
-//浮动
-
 .fl {
   float: left;
 }
@@ -176,3 +155,5 @@ footer {
 /*
   工具类  End
 */
+
+/*# sourceMappingURL=index.css.map */
