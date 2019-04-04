@@ -19,6 +19,8 @@ body {
 /**
  * Removes the default spacing and border for appropriate elements.
  */
+body,
+html,
 dt,
 dl,
 dd,
