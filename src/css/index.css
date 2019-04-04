@@ -19,6 +19,8 @@ body {
 /**
  * Removes the default spacing and border for appropriate elements.
  */
+body,
+html,
 dt,
 dl,
 dd,
@@ -155,5 +157,68 @@ footer {
 /*
   工具类  End
 */
+header {
+  width: 1000px;
+  border-top: 2.4rem solid #6db6ff;
+  margin: 0 auto;
+  padding: 3.8rem 7.6rem 1.5rem 7.3rem;
+}
+header h1 {
+  width: 12.1rem;
+  height: 6.3rem;
+}
+header h1 a {
+  display: block;
+  width: inherit;
+  height: inherit;
+  background: url("../assets/images/logo.png") no-repeat 0 0;
+  background-size: cover;
+  text-indent: -1000rem;
+}
+header nav {
+  margin-top: 3.1rem;
+}
+header nav ul {
+  margin-right: 4.9rem;
+  margin-top: 0.2rem;
+}
+header nav ul li {
+  float: left;
+  font-size: 1.4rem;
+}
+header nav ul li:not(:last-of-type) {
+  margin-right: 1.8rem;
+}
+header nav ul li:first-child:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 0.1rem;
+  background-color: #828282;
+  margin-top: 0.7rem;
+  margin: 0.7rem auto 0;
+}
+header nav ul li:hover:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 0.1rem;
+  background-color: #828282;
+  margin-top: 0.7rem;
+  margin: 0.7rem auto 0;
+}
+header nav .search {
+  position: relative;
+}
+header nav .search input {
+  box-sizing: border-box;
+  border: 0.1rem solid #000;
+  padding: 0.4rem 2.7rem 0.3rem 0.8rem;
+}
+header nav .search i {
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.3rem;
+}
 
 /*# sourceMappingURL=index.css.map */

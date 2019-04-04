@@ -1,0 +1,10 @@
+  // 添加底部下划线
+  @mixin underline ($w, $h, $bgc) {
+    content: '';
+    display: block;
+    width: $w;
+    height: $h;
+    background-color: $bgc;
+    margin-top: .7rem;
+    margin: .7rem auto 0;
+  }
