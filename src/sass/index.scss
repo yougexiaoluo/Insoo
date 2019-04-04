@@ -41,7 +41,7 @@ header {
 
     ul {
       margin-right: 4.9rem;
-      margin-top: .2rem;
+      margin-top: .4rem;
 
       li {
         float: left;
@@ -80,7 +80,9 @@ header {
       i {
         position: absolute;
         right: .7rem;
-        bottom: .3rem;
+        top: .7rem;
+        font-size: 1.4rem;
+        cursor: pointer;
       }
     }
   }
@@ -139,4 +141,67 @@ header {
       }
     }
   }
+}
+
+// 关于我们模块 Start
+.about_wrap {
+  width: $width;
+  margin: 0 auto;
+
+  // 标题
+  .about_title {
+    width: 14.5rem;
+    box-sizing: $boxs;
+    border: .1rem solid #6db6ff;
+    margin: 2.6rem auto 2.1rem;
+    text-align: center;
+
+    .t_wrap {
+      display: inline-block;
+      background-color: #fff;
+      padding: 0 .4rem;
+      margin-top: -1.8rem;
+
+      h3 {
+        font-size: 2.4rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // 介绍
+  .about_dec {
+    display: flex;
+    justify-content: space-between;
+    li {
+      width: 32.2rem;
+      background-color: #f2f2f2;
+      box-sizing: $boxs;
+      text-align: center;
+      padding: 1.8rem 1.1rem 2rem 1.2rem;
+      .dec_t {
+        margin-top: 1.7rem;
+        span {
+          display: block;
+          font-size: 1.6rem;
+          &.to_upercase {
+            text-transform: uppercase;
+            margin-top: .9rem;
+            margin-bottom: 1.6rem;
+          }
+        }
+      }
+      p {
+        color: #999;
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+        text-align: left;
+      }
+    }
+  }
+
 }

@@ -6,6 +6,14 @@ html {
   font-size: 62.5%;
 }
 
+body,
+button,
+input,
+select,
+textarea {
+  font-family: tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;
+}
+
 body {
   font-size: 1.6rem;
 }
