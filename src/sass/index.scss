@@ -3,11 +3,14 @@
 @import './mixin.scss';
 
 // 公共变量
-$width: 1000px;
+$width: 100rem;
 $color1: #6db6ff;
 $boxs: border-box;
 
-
+body {
+  // 调试用的
+  margin-bottom: 200px;
+}
 
 //头部模块样式 Start
 
@@ -43,6 +46,7 @@ header {
       li {
         float: left;
         font-size: 1.4rem;
+
         &:not(:last-of-type) {
           margin-right: 1.8rem;
         }
@@ -77,6 +81,61 @@ header {
         position: absolute;
         right: .7rem;
         bottom: .3rem;
+      }
+    }
+  }
+}
+
+// banner模块 Start
+.banner_wrap {
+  width: $width;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+
+  .banner_list {
+    width: $width;
+    height: 40rem;
+    position: relative;
+    @include setBgImage('../assets/images/banner_01.jpg', no-repeat, 0 0, cover);
+
+    span {
+      color: #395571;
+      font-size: 3.2rem;
+      letter-spacing: 7px;
+      @include posTL(absolute, 13.3rem, 42.7rem);
+
+      &:first-child {
+        @include posTL(absolute, 8.2rem, 28.2rem);
+      }
+
+      &:last-child {
+        @include posTL(absolute, 16.2rem, 58.7rem);
+      }
+    }
+  }
+
+  // 按钮 
+  .banner_list_btn {
+    display: flex;
+    position: absolute;
+    bottom: .7rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      flex: 1 0 auto;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #395674;
+      border-radius: 50%;
+
+      &.selected {
+        background-color: #7f5819;
+
+        &+li {
+          margin: 0 1rem 0 1.2rem;
+        }
       }
     }
   }

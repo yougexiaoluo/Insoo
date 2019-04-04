@@ -157,8 +157,12 @@ footer {
 /*
   工具类  End
 */
+body {
+  margin-bottom: 200px;
+}
+
 header {
-  width: 1000px;
+  width: 100rem;
   border-top: 2.4rem solid #6db6ff;
   margin: 0 auto;
   padding: 3.8rem 7.6rem 1.5rem 7.3rem;
@@ -219,6 +223,60 @@ header nav .search i {
   position: absolute;
   right: 0.7rem;
   bottom: 0.3rem;
+}
+
+.banner_wrap {
+  width: 100rem;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.banner_wrap .banner_list {
+  width: 100rem;
+  height: 40rem;
+  position: relative;
+  background-image: url("../assets/images/banner_01.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.banner_wrap .banner_list span {
+  color: #395571;
+  font-size: 3.2rem;
+  letter-spacing: 7px;
+  position: absolute;
+  top: 13.3rem;
+  left: 42.7rem;
+}
+.banner_wrap .banner_list span:first-child {
+  position: absolute;
+  top: 8.2rem;
+  left: 28.2rem;
+}
+.banner_wrap .banner_list span:last-child {
+  position: absolute;
+  top: 16.2rem;
+  left: 58.7rem;
+}
+.banner_wrap .banner_list_btn {
+  display: flex;
+  position: absolute;
+  bottom: 0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner_wrap .banner_list_btn li {
+  flex: 1 0 auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #395674;
+  border-radius: 50%;
+}
+.banner_wrap .banner_list_btn li.selected {
+  background-color: #7f5819;
+}
+.banner_wrap .banner_list_btn li.selected + li {
+  margin: 0 1rem 0 1.2rem;
 }
 
 /*# sourceMappingURL=index.css.map */

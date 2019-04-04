@@ -8,3 +8,19 @@
     margin-top: .7rem;
     margin: .7rem auto 0;
   }
+
+  // 设置位置
+  @mixin posTL($posType, $t_v, $l_f) {
+    position: $posType;
+    top: $t_v;
+    left: $l_f;
+  }
+
+  // 设置背景图的一个@mixin 命令
+
+  @mixin setBgImage($url, $repeat, $position, $size) {
+    background-image: url($url);
+    background-repeat: $repeat;
+    background-position: $position;
+    background-size: $size;
+  }
