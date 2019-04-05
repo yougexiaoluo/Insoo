@@ -12,12 +12,6 @@ $auto: 0 auto;
 $center: center;
 $rgba28: rgba(0, 0, 0, 28%);
 
-
-body {
-  // 调试用的
-  margin-bottom: 200px;
-}
-
 //头部模块样式 Start
 
 header {
@@ -409,4 +403,274 @@ header {
   }
 
 
+}
+
+// 页脚部分 Start
+.footer_wrap {
+  width: $width;
+  margin: 2.6rem auto 0;
+  border-top: 1px solid #eaedf0;
+
+  .layer {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.4rem 4.9rem 2.4rem 5.1rem;
+
+    // 底部导航
+    .layer_l {
+      width: 55.3rem;
+      font-family: 'Mycrosoft YaHei';
+
+      dl {
+        float: left;
+
+        &.introduce {
+          padding-right: 5.5rem;
+        }
+
+        &.help {
+          padding-right: 10.9rem;
+        }
+
+        &.win_win {
+          padding-right: 5.3rem;
+        }
+
+        dt {
+          font-size: 1.6rem;
+          font-weight: bold;
+          padding-bottom: 1.8rem;
+        }
+
+        dd {
+          font-size: 1.2rem;
+
+          &:not(:last-of-type) {
+            padding-bottom: 1.1rem;
+          }
+        }
+      }
+    }
+
+    .layer_r {
+      // width: 27.8rem;
+
+      // 联系方式 以及投诉方式
+      .layer_r_t {
+        display: flex;
+        justify-content: space-between;
+
+        // 电话图标
+        .telepho_icon {
+          .icon-telephone {
+            color: #1a294b;
+            font-size: 4.3rem;
+          }
+        }
+
+        //电话热线
+        .r_x {
+          margin: 0 .6rem;
+
+          h5 {
+            font-family: 'Mycrosoft YaHei';
+            font-size: 1.6rem;
+
+            &:first-child {
+              letter-spacing: .35rem;
+            }
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        //投诉电话
+        .t_s {
+          font-size: 1rem;
+          vertical-align: middle;
+
+          .gz_wrap {
+            text-align: right;
+            margin-top: 1.3rem;
+
+            i {
+              color: #f43847;
+              font-size: 1.2rem;
+
+            }
+
+            .icon-guanzhu {
+              color: #52bff1;
+            }
+
+            a {
+              border-radius: .3rem;
+              background-color: #f43847;
+              color: #fff;
+              padding: .2rem .5rem;
+
+              &:last-child {
+                background-color: #52bff1;
+              }
+            }
+          }
+        }
+      }
+
+      // 二维码
+      .layer_r_b {
+        figure {
+          margin-top: 1rem;
+
+          img {
+            margin-right: 1.4rem;
+            vertical-align: bottom;
+          }
+
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    // 联系方式
+  }
+
+  // 版权
+  .copyright_wrap {
+    background-color: #6db6ff;
+    font-size: 1.2rem;
+    padding-top: 4.3rem;
+    padding-bottom: 1.5rem;
+
+  }
+}
+
+
+
+@media only screen and (max-width: 1080px),
+only screen and (max-device-width:1080px) {
+
+  html,
+  body {
+    font-size: 16.875px;
+  }
+}
+
+@media only screen and (max-width: 960px),
+only screen and (max-device-width:960px) {
+
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 800px),
+only screen and (max-device-width:800px) {
+
+  html,
+  body {
+    font-size: 12.5px;
+  }
+}
+
+@media only screen and (max-width: 720px),
+only screen and (max-device-width:720px) {
+
+  html,
+  body {
+    font-size: 11.25px;
+  }
+}
+
+@media only screen and (max-width: 640px),
+only screen and (max-device-width:640px) {
+
+  html,
+  body {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px),
+only screen and (max-device-width:600px) {
+
+  html,
+  body {
+    font-size: 9.375px;
+  }
+}
+
+@media only screen and (max-width: 540px),
+only screen and (max-device-width:540px) {
+
+  html,
+  body {
+    font-size: 8.4375px;
+  }
+}
+
+@media only screen and (max-width: 480px),
+only screen and (max-device-width:480px) {
+
+  html,
+  body {
+    font-size: 7.5px;
+  }
+}
+
+@media only screen and (max-width: 414px),
+only screen and (max-device-width:414px) {
+
+  html,
+  body {
+    font-size: 6.46875px;
+  }
+}
+
+@media only screen and (max-width: 400px),
+only screen and (max-device-width:400px) {
+
+  html,
+  body {
+    font-size: 6.25px;
+  }
+}
+
+@media only screen and (max-width: 375px),
+only screen and (max-device-width:375px) {
+
+  html,
+  body {
+    font-size: 5.859375px;
+  }
+}
+
+@media only screen and (max-width: 360px),
+only screen and (max-device-width:360px) {
+
+  html,
+  body {
+    font-size: 5.625px;
+  }
+}
+
+@media only screen and (max-width: 320px),
+only screen and (max-device-width:320px) {
+
+  html,
+  body {
+    font-size: 5px;
+  }
+}
+
+@media only screen and (max-width: 240px),
+only screen and (max-device-width:240px) {
+
+  html,
+  body {
+    font-size: 3.75px;
+  }
 }
