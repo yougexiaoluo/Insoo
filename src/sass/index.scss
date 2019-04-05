@@ -5,7 +5,11 @@
 // 公共变量
 $width: 100rem;
 $color1: #6db6ff;
+$colorW: #fff;
 $boxs: border-box;
+$uppercase: uppercase;
+$auto: 0 auto;
+$center: center;
 
 body {
   // 调试用的
@@ -17,7 +21,7 @@ body {
 header {
   width: $width;
   border-top: 2.4rem solid $color1;
-  margin: 0 auto;
+  margin: $auto;
   padding: 3.8rem 7.6rem 1.5rem 7.3rem;
 
   // logo
@@ -88,11 +92,11 @@ header {
   }
 }
 
-// banner模块 Start
+// banner模块 Start 
 .banner_wrap {
   width: $width;
   overflow: hidden;
-  margin: 0 auto;
+  margin: $auto;
   position: relative;
 
   .banner_list {
@@ -146,60 +150,163 @@ header {
 // 关于我们模块 Start
 .about_wrap {
   width: $width;
-  margin: 0 auto;
-
-  // 标题
-  .about_title {
-    width: 14.5rem;
-    box-sizing: $boxs;
-    border: .1rem solid #6db6ff;
-    margin: 2.6rem auto 2.1rem;
-    text-align: center;
-
-    .t_wrap {
-      display: inline-block;
-      background-color: #fff;
-      padding: 0 .4rem;
-      margin-top: -1.8rem;
-
-      h3 {
-        font-size: 2.4rem;
-      }
-
-      p {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-      }
-    }
-  }
+  background-color: #fafafa;
+  overflow: hidden;
+  margin: $auto;
+  padding: 0rem 5rem 8rem 5.1rem;
+  // 小标题
+  @include publicM(#000, 2.6rem, 2.1rem);
 
   // 介绍
   .about_dec {
     display: flex;
     justify-content: space-between;
+
     li {
-      width: 32.2rem;
+      flex-shrink: 0;
       background-color: #f2f2f2;
       box-sizing: $boxs;
-      text-align: center;
-      padding: 1.8rem 1.1rem 2rem 1.2rem;
+      text-align: $center;
+      padding-top: 1.8rem;
+      padding-bottom: 2rem;
+      $size12: 1.2rem;
+
+      &.left {
+        width: 26.7rem;
+        padding-left: $size12;
+        padding-right: 1.1rem;
+      }
+
+      &.current {
+        width: 32.2rem;
+        padding-left: 3.7rem;
+        padding-right: 3.5rem;
+        margin-left: 2rem;
+        margin-right: 2.1rem;
+      }
+
+      &.right {
+        width: 27rem;
+        padding-left: $size12;
+        padding-right: $size12;
+      }
+
+      img {
+        display: inline-block;
+        width: 12.6rem;
+        height: 12.6rem;
+      }
+
       .dec_t {
         margin-top: 1.7rem;
+
         span {
           display: block;
           font-size: 1.6rem;
+
           &.to_upercase {
-            text-transform: uppercase;
+            text-transform: $uppercase;
             margin-top: .9rem;
             margin-bottom: 1.6rem;
           }
+
+          &:first-child {
+            font-weight: bold;
+          }
         }
       }
+
       p {
         color: #999;
         font-size: 1.2rem;
         line-height: 2.5rem;
         text-align: left;
+      }
+    }
+  }
+
+}
+
+// 投资案例
+.case_wrap {
+  position: relative;
+  width: $width;
+  margin: 2.2rem auto 0;
+  padding: 0rem 5rem 0rem 5.1rem;
+  // 小标题
+  @include publicM(#000, 3.4rem, 3.2rem);
+
+  // 特殊情况特殊处理
+  .title {
+    position: absolute;
+    top: -(14.5rem/2);
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+
+  // 每个项目的样式
+  .case_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      flex-shrink: 0;
+      width: 29.5rem;
+      text-align: $center;
+
+      .bg {
+        width: 100%;
+        height: 21rem;
+        box-sizing: $boxs;
+        border: 1px solid #000;
+        overflow: hidden;
+        font-size: 0;
+        // line-height: 0;
+
+        // 使用这种方式添加背景，没能实现鼠标移入触发：hover伪类动画效果
+        // @include setBgImage('../assets/images/case_bg_01.jpg', no-repeat, 0 0, cover);
+
+        // &.bg_02 {
+        //   @include setBgImage('../assets/images/case_bg_02.jpg', no-repeat, 0 0, cover);
+        // }
+
+        // &.bg_03 {
+        //   @include setBgImage('../assets/images/case_bg_03.jpg', no-repeat, 0 0, cover);
+        // }
+        img {
+          display: block;
+          width: 29.5rem;
+          height: 21rem;
+          // transition: all .5s ease-in-out;
+        }
+
+        &:hover img {
+          // transform: scale(1.2);
+        }
+      }
+
+
+
+      p {
+        font-size: 1.2rem;
+        margin: 1.6rem 0 2rem;
+      }
+
+      a {
+        display: inline-block;
+        width: 13.5rem;
+        padding-top: .6rem;
+        padding-bottom: .5rem;
+        margin: 0rem auto 4.6rem auto;
+        background-color: #6db6ff;
+        color: $colorW;
+        font-size: 1.6rem;
+        font-weight: bold;
+
+        // :hover 
+        @include Hover;
       }
     }
   }
