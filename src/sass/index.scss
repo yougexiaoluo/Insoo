@@ -2,7 +2,7 @@
 @import './base.scss';
 @import './mixin.scss';
 
-// 公共变量
+// 公共变量 Start
 $width: 100rem;
 $color1: #6db6ff;
 $colorW: #fff;
@@ -11,6 +11,15 @@ $uppercase: uppercase;
 $auto: 0 auto;
 $center: center;
 $rgba28: rgba(0, 0, 0, 28%);
+$left: left;
+$pointer: pointer;
+$inherit: inherit;
+$flex: flex;
+$hidden: hidden;
+$spbw: space-between;
+// 公共变量 Emd
+
+
 
 //头部模块样式 Start
 
@@ -18,7 +27,7 @@ header {
   width: $width;
   border-top: 2.4rem solid $color1;
   margin: $auto;
-  padding: 3.8rem 7.6rem 1.5rem 7.3rem;
+  @include setPadding(3.8rem, 7.6rem, 1.5rem, 7.3rem);
 
   // logo
   h1 {
@@ -27,8 +36,8 @@ header {
 
     a {
       display: block;
-      width: inherit;
-      height: inherit;
+      width: $inherit;
+      height: $inherit;
       background: url('../assets/images/logo.png') no-repeat 0 0;
       background-size: cover;
       text-indent: -1000rem;
@@ -44,7 +53,7 @@ header {
       margin-top: .4rem;
 
       li {
-        float: left;
+        float: $left;
         font-size: 1.4rem;
 
         &:not(:last-of-type) {
@@ -74,7 +83,7 @@ header {
       input {
         box-sizing: $boxs;
         border: .1rem solid #000;
-        padding: .4rem 2.7rem .3rem .8rem;
+        @include setPadding(.4rem, 2.7rem, .3rem, .8rem);
       }
 
       i {
@@ -82,7 +91,7 @@ header {
         right: .7rem;
         top: .7rem;
         font-size: 1.4rem;
-        cursor: pointer;
+        cursor: $pointer;
       }
     }
   }
@@ -119,7 +128,7 @@ header {
 
   // 按钮 
   .banner_list_btn {
-    display: flex;
+    display: $flex;
     position: absolute;
     bottom: .7rem;
     left: 50%;
@@ -131,6 +140,7 @@ header {
       height: 1.5rem;
       background-color: #395674;
       border-radius: 50%;
+      cursor: $pointer;
 
       &.selected {
         background-color: #7f5819;
@@ -143,267 +153,275 @@ header {
   }
 }
 
-// 关于我们模块 Start
-.about_wrap {
-  width: $width;
-  background-color: #fafafa;
-  overflow: hidden;
-  margin: $auto;
-  padding: 0rem 5rem 8rem 5.1rem;
-  // 小标题
-  @include publicM(#000, 2.6rem, 2.1rem);
+// 内容区域 Start
+.c_container {
 
-  // 介绍
-  .about_dec {
-    display: flex;
-    justify-content: space-between;
+  // 关于我们模块 Start
+  .about_wrap {
+    width: $width;
+    background-color: #fafafa;
+    overflow: $hidden;
+    margin: $auto;
+    padding: 0rem 5rem 8rem 5.1rem;
+    // 小标题
+    @include publicM(#000, 2.6rem, 2.1rem);
 
-    li {
-      flex-shrink: 0;
-      background-color: #f2f2f2;
-      box-sizing: $boxs;
-      text-align: $center;
-      padding-top: 1.8rem;
-      padding-bottom: 2rem;
-      $size12: 1.2rem;
+    // 介绍
+    .about_dec {
+      display: $flex;
+      justify-content: $spbw;
 
-      &.left {
-        width: 26.7rem;
-        padding-left: $size12;
-        padding-right: 1.1rem;
-      }
-
-      &.current {
-        width: 32.2rem;
-        padding-left: 3.7rem;
-        padding-right: 3.5rem;
-        margin-left: 2rem;
-        margin-right: 2.1rem;
-      }
-
-      &.right {
-        width: 27rem;
-        padding-left: $size12;
-        padding-right: $size12;
-      }
-
-      img {
-        display: inline-block;
-        width: 12.6rem;
-        height: 12.6rem;
-      }
-
-      .dec_t {
-        margin-top: 1.7rem;
-
-        span {
-          display: block;
-          font-size: 1.6rem;
-
-          &.to_upercase {
-            text-transform: $uppercase;
-            margin-top: .9rem;
-            margin-bottom: 1.6rem;
-          }
-
-          &:first-child {
-            font-weight: bold;
-          }
-        }
-      }
-
-      p {
-        color: #999;
-        font-size: 1.2rem;
-        line-height: 2.5rem;
-        text-align: left;
-      }
-    }
-  }
-
-}
-
-// 投资案例 Start 
-.case_wrap {
-  position: relative;
-  width: $width;
-  margin: 2.2rem auto 0;
-  padding: 0rem 5rem 0rem 5.1rem;
-  // 小标题
-  @include publicM(#000, 3.4rem, 3.2rem);
-
-  // 特殊情况特殊处理
-  .title {
-    position: absolute;
-    top: -(14.5rem/2);
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-  }
-
-  // 每个项目的样式
-  .case_list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    li {
-      flex-shrink: 0;
-      width: 29.5rem;
-      text-align: $center;
-
-      .bg {
-        width: 100%;
-        height: 21rem;
+      li {
+        flex-shrink: 0;
+        background-color: #f2f2f2;
         box-sizing: $boxs;
-        border: 1px solid #000;
-        overflow: hidden;
-        font-size: 0;
-        // line-height: 0;
+        text-align: $center;
+        padding-top: 1.8rem;
+        padding-bottom: 2rem;
+        $size12: 1.2rem;
 
-        // 使用这种方式添加背景，没能实现鼠标移入触发：hover伪类动画效果
-        // @include setBgImage('../assets/images/case_bg_01.jpg', no-repeat, 0 0, cover);
+        &.left {
+          width: 26.7rem;
+          padding-left: $size12;
+          padding-right: 1.1rem;
+        }
 
-        // &.bg_02 {
-        //   @include setBgImage('../assets/images/case_bg_02.jpg', no-repeat, 0 0, cover);
-        // }
+        &.current {
+          width: 32.2rem;
+          padding-left: 3.7rem;
+          padding-right: 3.5rem;
+          margin-left: 2rem;
+          margin-right: 2.1rem;
+        }
 
-        // &.bg_03 {
-        //   @include setBgImage('../assets/images/case_bg_03.jpg', no-repeat, 0 0, cover);
-        // }
+        &.right {
+          width: 27rem;
+          padding-left: $size12;
+          padding-right: $size12;
+        }
+
         img {
-          display: block;
-          width: 29.5rem;
-          height: 21rem;
-          // transition: all .5s ease-in-out;
+          display: inline-block;
+          width: 12.6rem;
+          height: 12.6rem;
         }
 
-        &:hover img {
-          // transform: scale(1.2);
-        }
-      }
+        .dec_t {
+          margin-top: 1.7rem;
 
+          span {
+            display: block;
+            font-size: 1.6rem;
 
+            &.to_upercase {
+              text-transform: $uppercase;
+              margin-top: .9rem;
+              margin-bottom: 1.6rem;
+            }
 
-      p {
-        font-size: 1.2rem;
-        margin: 1.6rem 0 2rem;
-      }
-
-      a {
-        display: inline-block;
-        width: 13.5rem;
-        padding-top: .6rem;
-        padding-bottom: .5rem;
-        margin: 0rem auto 4.6rem auto;
-        background-color: #6db6ff;
-        color: $colorW;
-        font-size: 1.6rem;
-        font-weight: bold;
-
-        // :hover 
-        @include Hover;
-      }
-    }
-  }
-
-}
-
-// 友情链接  Start 
-
-.friendly_link_wrap {
-  width: $width;
-  // height: 30.5rem;
-  @include setBgImage('../assets/images/link_bg.jpg', no-repeat, 0 0, 100% 100%);
-  overflow: hidden;
-  margin: $auto;
-  padding-bottom: 12.2rem;
-  position: relative;
-
-  &:before {
-    width: 100%;
-    height: 100%;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $rgba28;
-  }
-
-  // 标题
-  @include publicM($colorW, 4.3rem, 4.3rem);
-
-  .title {
-    position: relative;
-  }
-
-  .links {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    padding-left: 8.2rem;
-    padding-right: 8.5rem;
-
-    li {
-      width: 22.2rem;
-      height: 8.1rem;
-
-      a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        @include setBgImage('../assets/images/link_01.jpg', no-repeat, 0 0, 100% 100%);
-      }
-
-      @for $i from 1 to 4 {
-        &:nth-child(#{$i}) {
-          a {
-            background-image: url('../assets/images/link_0#{$i}.jpg');
+            &:first-child {
+              font-weight: bold;
+            }
           }
         }
-      }
-    }
 
-  }
-
-  // 控制按钮
-  .controls_btn {
-
-    // 需要给控制按钮添加一个动画效果
-    i {
-      position: absolute;
-      top: 50%;
-      // transform: translateY(-50%);
-      margin-top: -(6.9rem/2);
-      width: 3.7rem;
-      background: $rgba28;
-      color: $colorW;
-      font-size: 3rem;
-      line-height: 6.9rem;
-      text-align: center;
-
-      &.icon-Arrowleft {
-        left: 1rem;
-
-        &:hover {
+        p {
+          color: #999;
+          font-size: 1.2rem;
+          line-height: 2.5rem;
           text-align: left;
         }
       }
+    }
 
-      &.icon-Arrowright {
-        right: .7rem;
+  }
 
-        &:hover {
-          text-align: right;
+  // 投资案例 Start 
+  .case_wrap {
+    position: relative;
+    width: $width;
+    margin: 2.2rem auto 0;
+    @include setPadding(0rem, 5rem, 0rem, 5.1rem);
+    // 小标题
+    @include publicM(#000, 3.4rem, 3.2rem);
+
+    // 特殊情况特殊处理
+    .title {
+      position: absolute;
+      top: -(14.5rem/2);
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+    }
+
+    // 每个项目的样式
+    .case_list {
+      display: $flex;
+      // $spbw --> space-between
+      justify-content: $spbw;
+      flex-wrap: wrap;
+
+      li {
+        flex-shrink: 0;
+        width: 29.5rem;
+        text-align: $center;
+
+        .bg {
+          width: 100%;
+          height: 21rem;
+          box-sizing: $boxs;
+          border: 1px solid #000;
+          overflow: $hidden;
+          font-size: 0;
+          // line-height: 0;
+
+          // 使用这种方式添加背景，没能实现鼠标移入触发：hover伪类动画效果
+          // @include setBgImage('../assets/images/case_bg_01.jpg', no-repeat, 0 0, cover);
+
+          // &.bg_02 {
+          //   @include setBgImage('../assets/images/case_bg_02.jpg', no-repeat, 0 0, cover);
+          // }
+
+          // &.bg_03 {
+          //   @include setBgImage('../assets/images/case_bg_03.jpg', no-repeat, 0 0, cover);
+          // }
+          img {
+            display: block;
+            width: 29.5rem;
+            height: 21rem;
+            transition: all .5s ease-in-out;
+          }
+
+          &:hover img {
+            // transform: scale(1.2);
+          }
+        }
+
+
+
+        figcaption {
+          font-size: 1.2rem;
+          margin: 1.6rem 0 2rem;
+        }
+
+        a {
+          display: inline-block;
+          width: 13.5rem;
+          padding-top: .6rem;
+          padding-bottom: .5rem;
+          margin: 0rem auto 4.6rem auto;
+          background-color: #6db6ff;
+          color: $colorW;
+          font-size: 1.6rem;
+          font-weight: bold;
+
+          // :hover 
+          @include Hover;
+        }
+      }
+    }
+
+  }
+
+  // 友情链接  Start 
+
+  .friendly_link_wrap {
+    width: $width;
+    // height: 30.5rem;
+    @include setBgImage('../assets/images/link_bg.jpg', no-repeat, 0 0, 100% 100%);
+    overflow: $hidden;
+    margin: $auto;
+    padding-bottom: 12.2rem;
+    position: relative;
+
+    &:before {
+      width: 100%;
+      height: 100%;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $rgba28;
+    }
+
+    // 标题
+    @include publicM($colorW, 4.3rem, 4.3rem);
+
+    .title {
+      position: relative;
+    }
+
+    .links {
+      display: $flex;
+      justify-content: $spbw;
+      position: relative;
+      padding-left: 8.2rem;
+      padding-right: 8.5rem;
+
+      li {
+        width: 22.2rem;
+        height: 8.1rem;
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          @include setBgImage('../assets/images/link_01.jpg', no-repeat, 0 0, 100% 100%);
+        }
+
+        @for $i from 1 to 4 {
+          &:nth-child(#{$i}) {
+            a {
+              background-image: url('../assets/images/link_0#{$i}.jpg');
+            }
+          }
         }
       }
 
     }
 
+    // 控制按钮
+    .controls_btn {
+
+      // 需要给控制按钮添加一个动画效果
+      i {
+        position: absolute;
+        top: 50%;
+        // transform: translateY(-50%);
+        margin-top: -(6.9rem/2);
+        width: 3.7rem;
+        background: $rgba28;
+        color: $colorW;
+        font-size: 3rem;
+        line-height: 6.9rem;
+        text-align: center;
+
+        &.icon-Arrowleft {
+          left: 1rem;
+
+          &:hover {
+            text-align: left;
+          }
+        }
+
+        &.icon-Arrowright {
+          right: .7rem;
+
+          &:hover {
+            text-align: right;
+          }
+        }
+
+      }
+
+    }
+
+
   }
 
-
 }
+
+// 内容区域 End
 
 // 页脚部分 Start
 .footer_wrap {
@@ -414,7 +432,7 @@ header {
   .layer {
     display: flex;
     justify-content: space-between;
-    padding: 4.4rem 4.9rem 2.4rem 5.1rem;
+    @include setPadding(4.4rem, 4.9rem, 2.4rem, 5.1rem);
 
     // 底部导航
     .layer_l {
@@ -422,7 +440,7 @@ header {
       font-family: 'Mycrosoft YaHei';
 
       dl {
-        float: left;
+        float: $left;
 
         &.introduce {
           padding-right: 5.5rem;
@@ -544,133 +562,5 @@ header {
     padding-top: 4.3rem;
     padding-bottom: 1.5rem;
 
-  }
-}
-
-
-
-@media only screen and (max-width: 1080px),
-only screen and (max-device-width:1080px) {
-
-  html,
-  body {
-    font-size: 16.875px;
-  }
-}
-
-@media only screen and (max-width: 960px),
-only screen and (max-device-width:960px) {
-
-  html,
-  body {
-    font-size: 15px;
-  }
-}
-
-@media only screen and (max-width: 800px),
-only screen and (max-device-width:800px) {
-
-  html,
-  body {
-    font-size: 12.5px;
-  }
-}
-
-@media only screen and (max-width: 720px),
-only screen and (max-device-width:720px) {
-
-  html,
-  body {
-    font-size: 11.25px;
-  }
-}
-
-@media only screen and (max-width: 640px),
-only screen and (max-device-width:640px) {
-
-  html,
-  body {
-    font-size: 10px;
-  }
-}
-
-@media only screen and (max-width: 600px),
-only screen and (max-device-width:600px) {
-
-  html,
-  body {
-    font-size: 9.375px;
-  }
-}
-
-@media only screen and (max-width: 540px),
-only screen and (max-device-width:540px) {
-
-  html,
-  body {
-    font-size: 8.4375px;
-  }
-}
-
-@media only screen and (max-width: 480px),
-only screen and (max-device-width:480px) {
-
-  html,
-  body {
-    font-size: 7.5px;
-  }
-}
-
-@media only screen and (max-width: 414px),
-only screen and (max-device-width:414px) {
-
-  html,
-  body {
-    font-size: 6.46875px;
-  }
-}
-
-@media only screen and (max-width: 400px),
-only screen and (max-device-width:400px) {
-
-  html,
-  body {
-    font-size: 6.25px;
-  }
-}
-
-@media only screen and (max-width: 375px),
-only screen and (max-device-width:375px) {
-
-  html,
-  body {
-    font-size: 5.859375px;
-  }
-}
-
-@media only screen and (max-width: 360px),
-only screen and (max-device-width:360px) {
-
-  html,
-  body {
-    font-size: 5.625px;
-  }
-}
-
-@media only screen and (max-width: 320px),
-only screen and (max-device-width:320px) {
-
-  html,
-  body {
-    font-size: 5px;
-  }
-}
-
-@media only screen and (max-width: 240px),
-only screen and (max-device-width:240px) {
-
-  html,
-  body {
-    font-size: 3.75px;
   }
 }

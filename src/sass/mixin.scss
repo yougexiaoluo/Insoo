@@ -1,61 +1,67 @@
-  // 添加底部下划线
-  @mixin underline ($w, $h, $bgc) {
-    content: '';
-    display: block;
-    width: $w;
-    height: $h;
-    background-color: $bgc;
-    margin-top: .7rem;
-    margin: .7rem auto 0;
-  }
+@charset 'utf-8';
 
-  // 设置位置
-  @mixin posTL($posType, $t_v, $l_f) {
-    position: $posType;
-    top: $t_v;
-    left: $l_f;
-  }
+// 添加底部下划线
+@mixin underline ($w, $h, $bgc) {
+  content: '';
+  display: block;
+  width: $w;
+  height: $h;
+  background-color: $bgc;
+  margin-top: .7rem;
+  margin: .7rem auto 0;
+}
 
-  // 设置背景图的一个@mixin 命令
+// 设置位置
+@mixin posTL($posType, $t_v, $l_f) {
+  position: $posType;
+  top: $t_v;
+  left: $l_f;
+}
 
-  @mixin setBgImage($url, $repeat, $position, $size) {
-    background-image: url($url);
-    background-repeat: $repeat;
-    background-position: $position;
-    background-size: $size;
-  }
+// 设置背景图的一个@mixin 命令
 
-  // 小标题公共样式
-  @mixin publicM($color, $mt, $mb) {
-    .title {
-      width: 14.5rem;
-      box-sizing: $boxs;
-      color: $color;
-      text-align: $center;
-      margin: $mt auto $mb;
-      padding-bottom: .2rem;
+@mixin setBgImage($url, $repeat, $position, $size) {
+  background-image: url($url);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
 
-      @include setBgImage('../assets/images/border.png', no-repeat, 0 0, 14.5rem 3.6rem);
+// 小标题公共样式
+@mixin publicM($color, $mt, $mb) {
+  .title {
+    width: 14.5rem;
+    box-sizing: $boxs;
+    color: $color;
+    text-align: $center;
+    margin: $mt auto $mb;
+    padding-bottom: .2rem;
 
-      h3 {
-        position: relative;
-        top: -1.2rem;
-        display: inline-block;
-        font-size: 2.4rem;
-        margin-left: .4rem;
-      }
+    @include setBgImage('../assets/images/border.png', no-repeat, 0 0, 14.5rem 3.6rem);
 
-      p {
-        font-size: 1.4rem;
-        text-transform: $uppercase;
-        margin-top: -1.2rem;
-      }
+    h3 {
+      position: relative;
+      top: -1.2rem;
+      display: inline-block;
+      font-size: 2.4rem;
+      margin-left: .4rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      text-transform: $uppercase;
+      margin-top: -1.2rem;
     }
   }
+}
 
-  // a标签 :hover 伪类
-  @mixin Hover {
-    &:hover {
-      text-decoration: underline;
-    }
+// a标签 :hover 伪类
+@mixin Hover {
+  &:hover {
+    text-decoration: underline;
   }
+}
+
+@mixin setPadding($t, $r, $b, $l) {
+  padding: $t $r $b $l;
+}
