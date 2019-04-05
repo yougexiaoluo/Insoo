@@ -299,6 +299,7 @@ header nav .search i {
 .about_wrap .title {
   width: 14.5rem;
   box-sizing: border-box;
+  color: #000;
   text-align: center;
   margin: 2.6rem auto 2.1rem;
   padding-bottom: 0.2rem;
@@ -312,7 +313,6 @@ header nav .search i {
   top: -1.2rem;
   display: inline-block;
   font-size: 2.4rem;
-  color: #000;
   margin-left: 0.4rem;
 }
 .about_wrap .title p {
@@ -385,6 +385,7 @@ header nav .search i {
 .case_wrap .title {
   width: 14.5rem;
   box-sizing: border-box;
+  color: #000;
   text-align: center;
   margin: 3.4rem auto 3.2rem;
   padding-bottom: 0.2rem;
@@ -398,7 +399,6 @@ header nav .search i {
   top: -1.2rem;
   display: inline-block;
   font-size: 2.4rem;
-  color: #000;
   margin-left: 0.4rem;
 }
 .case_wrap .title p {
@@ -453,6 +453,106 @@ header nav .search i {
 }
 .case_wrap .case_list li a:hover {
   text-decoration: underline;
+}
+
+.friendly_link_wrap {
+  width: 100rem;
+  background-image: url("../assets/images/link_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-bottom: 12.2rem;
+  position: relative;
+}
+.friendly_link_wrap:before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.28);
+}
+.friendly_link_wrap .title {
+  width: 14.5rem;
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  margin: 4.3rem auto 4.3rem;
+  padding-bottom: 0.2rem;
+  background-image: url("../assets/images/border.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 14.5rem 3.6rem;
+}
+.friendly_link_wrap .title h3 {
+  position: relative;
+  top: -1.2rem;
+  display: inline-block;
+  font-size: 2.4rem;
+  margin-left: 0.4rem;
+}
+.friendly_link_wrap .title p {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-top: -1.2rem;
+}
+.friendly_link_wrap .title {
+  position: relative;
+}
+.friendly_link_wrap .links {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-left: 8.2rem;
+  padding-right: 8.5rem;
+}
+.friendly_link_wrap .links li {
+  width: 22.2rem;
+  height: 8.1rem;
+}
+.friendly_link_wrap .links li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/images/link_01.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+}
+.friendly_link_wrap .links li:nth-child(1) a {
+  background-image: url("../assets/images/link_01.jpg");
+}
+.friendly_link_wrap .links li:nth-child(2) a {
+  background-image: url("../assets/images/link_02.jpg");
+}
+.friendly_link_wrap .links li:nth-child(3) a {
+  background-image: url("../assets/images/link_03.jpg");
+}
+.friendly_link_wrap .controls_btn i {
+  position: absolute;
+  top: 50%;
+  margin-top: -3.45rem;
+  width: 3.7rem;
+  background: rgba(0, 0, 0, 0.28);
+  color: #fff;
+  font-size: 3rem;
+  line-height: 6.9rem;
+  text-align: center;
+}
+.friendly_link_wrap .controls_btn i.icon-Arrowleft {
+  left: 1rem;
+}
+.friendly_link_wrap .controls_btn i.icon-Arrowleft:hover {
+  text-align: left;
+}
+.friendly_link_wrap .controls_btn i.icon-Arrowright {
+  right: 0.7rem;
+}
+.friendly_link_wrap .controls_btn i.icon-Arrowright:hover {
+  text-align: right;
 }
 
 /*# sourceMappingURL=index.css.map */

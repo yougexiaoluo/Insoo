@@ -10,6 +10,8 @@ $boxs: border-box;
 $uppercase: uppercase;
 $auto: 0 auto;
 $center: center;
+$rgba28: rgba(0, 0, 0, 28%);
+
 
 body {
   // 调试用的
@@ -227,7 +229,7 @@ header {
 
 }
 
-// 投资案例
+// 投资案例 Start 
 .case_wrap {
   position: relative;
   width: $width;
@@ -310,5 +312,101 @@ header {
       }
     }
   }
+
+}
+
+// 友情链接  Start 
+
+.friendly_link_wrap {
+  width: $width;
+  // height: 30.5rem;
+  @include setBgImage('../assets/images/link_bg.jpg', no-repeat, 0 0, 100% 100%);
+  overflow: hidden;
+  margin: $auto;
+  padding-bottom: 12.2rem;
+  position: relative;
+
+  &:before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $rgba28;
+  }
+
+  // 标题
+  @include publicM($colorW, 4.3rem, 4.3rem);
+
+  .title {
+    position: relative;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 8.2rem;
+    padding-right: 8.5rem;
+
+    li {
+      width: 22.2rem;
+      height: 8.1rem;
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include setBgImage('../assets/images/link_01.jpg', no-repeat, 0 0, 100% 100%);
+      }
+
+      @for $i from 1 to 4 {
+        &:nth-child(#{$i}) {
+          a {
+            background-image: url('../assets/images/link_0#{$i}.jpg');
+          }
+        }
+      }
+    }
+
+  }
+
+  // 控制按钮
+  .controls_btn {
+
+    // 需要给控制按钮添加一个动画效果
+    i {
+      position: absolute;
+      top: 50%;
+      // transform: translateY(-50%);
+      margin-top: -(6.9rem/2);
+      width: 3.7rem;
+      background: $rgba28;
+      color: $colorW;
+      font-size: 3rem;
+      line-height: 6.9rem;
+      text-align: center;
+
+      &.icon-Arrowleft {
+        left: 1rem;
+
+        &:hover {
+          text-align: left;
+        }
+      }
+
+      &.icon-Arrowright {
+        right: .7rem;
+
+        &:hover {
+          text-align: right;
+        }
+      }
+
+    }
+
+  }
+
 
 }
