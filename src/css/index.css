@@ -16,12 +16,13 @@ textarea {
   -webkit-outline: none;
   border: 0 none;
 }
-body :focus,
-button :focus,
-input :focus,
-select :focus,
-textarea :focus {
-  outline: none;
+body:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  -webkit-outline: none !important;
 }
 
 body {

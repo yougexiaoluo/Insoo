@@ -1,0 +1,310 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+  /* 1 */
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;
+  outline: none;
+  -webkit-outline: none;
+  border: 0 none;
+}
+body:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  -webkit-outline: none !important;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+body,
+html,
+dt,
+dl,
+dd,
+figure,
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+pre,
+textarea {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+  text-decoration: none;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure,
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer {
+  display: block;
+}
+
+/*
+  工具类  Start
+*/
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tc {
+  text-align: center;
+}
+
+.vt {
+  vertical-align: top;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.vb {
+  vertical-align: bottom;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*
+  工具类  End
+*/
+.detail_wrap {
+  width: 100rem;
+  border-bottom: 0.1rem solid #cce6ff;
+  margin: 4.5rem auto 0;
+}
+.detail_wrap .jump_nav_lis {
+  display: flex;
+  width: 90%;
+  background-image: url(../assets/images/currentPos.png);
+  background-size: cover;
+  line-height: 3rem;
+  margin: 0 auto;
+}
+.detail_wrap .jump_nav_lis .gt:after {
+  content: ">";
+  margin: 0 0.6rem;
+}
+.detail_wrap .jump_nav_lis li {
+  font-size: 1.6rem;
+}
+.detail_wrap .jump_nav_lis li a {
+  color: #000;
+  font-weight: bold;
+}
+.detail_wrap .jump_nav_lis li.currentPos {
+  color: #fff;
+  padding-left: 0.7rem;
+}
+.detail_wrap .jump_nav_lis li.currentPos:after {
+  content: ":";
+  color: #000;
+  margin: 0 0.5rem 0 0.7rem;
+}
+.detail_wrap .detail_title {
+  font-size: 0;
+  margin-top: 5.4rem;
+  margin-bottom: 3.9rem;
+  text-align: center;
+}
+.detail_wrap .detail_title h4 {
+  font-size: 1.8rem;
+}
+.detail_wrap .detail_title p {
+  display: inline-block;
+  font-size: 1rem;
+}
+.detail_wrap .detail_title p:after {
+  content: "";
+  border-bottom: 0.1rem solid #6db6ff;
+  display: block;
+  margin: 0.9rem auto 0;
+  width: 54%;
+}
+.detail_wrap .detail_lis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detail_wrap .detail_lis .detail_item {
+  width: 75.1%;
+}
+.detail_wrap .detail_lis .detail_item .item_title {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-size: 0;
+  font-weight: bold;
+  height: 3.8rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+.detail_wrap .detail_lis .detail_item .item_title h5 {
+  font-size: 1.6rem;
+}
+.detail_wrap .detail_lis .detail_item .item_title p {
+  font-size: 1rem;
+}
+.detail_wrap .detail_lis .detail_item:nth-child(n) > .item_title {
+  background-image: url("../assets/images/top_t.png");
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+.detail_wrap .detail_lis .detail_item:nth-child(2n) > .item_title {
+  background-image: url("../assets/images/bottom_t.png");
+  padding-bottom: 0.5rem;
+  padding-top: 0;
+}
+.detail_wrap .detail_lis .des span {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.detail_wrap .detail_lis .des p {
+  font-size: 1.2rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+.detail_wrap .detail_lis .des p.text_i {
+  text-indent: 2em;
+}
+.detail_wrap .detail_lis .des ul {
+  font-size: 1.4rem;
+}
+.detail_wrap .detail_lis .des ol {
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 1.6rem;
+}
+.detail_wrap .detail_lis .des ol li {
+  list-style: decimal;
+}
+.detail_wrap .detail_lis .des figure {
+  width: 75.2rem;
+  height: 42.4rem;
+}
+.detail_wrap .detail_lis .des figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.detail_wrap .control_btn {
+  padding-top: 2.3rem;
+  padding-bottom: 2.1rem;
+}
+.detail_wrap .control_btn ul.btn {
+  display: flex;
+  justify-content: center;
+}
+.detail_wrap .control_btn ul.btn li:not(:last-of-type) {
+  margin-right: 1.5rem;
+}
+.detail_wrap .control_btn ul.btn li a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=detail.css.map */
