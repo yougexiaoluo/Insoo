@@ -60,9 +60,23 @@ h6,
 p,
 div,
 pre,
-textarea {
+textarea,
+table,
+tr,
+td,
+th {
   padding: 0;
   margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
 }
 
 button {

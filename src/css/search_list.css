@@ -1,0 +1,371 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+  /* 1 */
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;
+  outline: none;
+  -webkit-outline: none;
+  border: 0 none;
+}
+body:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  -webkit-outline: none !important;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+body,
+html,
+dt,
+dl,
+dd,
+figure,
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+pre,
+textarea,
+table,
+tr,
+td,
+th {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+  text-decoration: none;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure,
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer {
+  display: block;
+}
+
+/*
+  工具类  Start
+*/
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tc {
+  text-align: center;
+}
+
+.vt {
+  vertical-align: top;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.vb {
+  vertical-align: bottom;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*
+  工具类  End
+*/
+.search_list_wrap {
+  width: 100rem;
+  margin: 4.5rem auto 0;
+  padding: 0 5%;
+}
+.search_list_wrap .jump_nav_lis {
+  display: flex;
+  background-image: url(../assets/images/currentPos.png);
+  background-size: cover;
+  line-height: 3rem;
+}
+.search_list_wrap .jump_nav_lis .gt:after {
+  content: ">";
+  margin: 0 0.6rem;
+}
+.search_list_wrap .jump_nav_lis li {
+  font-size: 1.6rem;
+}
+.search_list_wrap .jump_nav_lis li a {
+  color: #000;
+  font-weight: bold;
+}
+.search_list_wrap .jump_nav_lis li.currentPos {
+  color: #fff;
+  padding-left: 0.7rem;
+}
+.search_list_wrap .jump_nav_lis li.currentPos:after {
+  content: ":";
+  color: #000;
+  margin: 0 0.5rem 0 0.7rem;
+}
+.search_list_wrap .classify {
+  margin-top: 3rem;
+  margin-bottom: 2.4rem;
+}
+.search_list_wrap .classify ul li {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+.search_list_wrap .classify ul li:first-child i {
+  background-color: #f57b3d;
+}
+.search_list_wrap .classify ul li:nth-child(2) i {
+  background-color: #9ac1c0;
+}
+.search_list_wrap .classify ul li:last-child i {
+  background-color: #ffc557;
+}
+.search_list_wrap .classify ul li i {
+  display: inline-block;
+  width: 3.8rem;
+  height: 3.8rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2.2rem;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 0.9rem;
+  padding: 0.8rem;
+}
+.search_list_wrap .classify ul li span {
+  font-size: 1.6rem;
+}
+.search_list_wrap .classify ul li a.total {
+  color: #84c0ff;
+  font-size: 1.4rem;
+  margin-right: 0.4rem;
+}
+.search_list_wrap .classify ul li a.total + a {
+  margin-left: 0.7rem;
+}
+.search_list_wrap .classify ul li a:hover {
+  text-decoration: underline;
+}
+.search_list_wrap .search_list {
+  box-sizing: border-box;
+  border-bottom: 0.1rem solid #b6daff;
+  background: url(../assets/images/search_list.png) no-repeat 0 0;
+  background-size: 100% 3.8rem;
+}
+.search_list_wrap .search_list table {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-left: 2.9rem;
+}
+.search_list_wrap .search_list table tr:first-child {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 3.8rem;
+  margin-top: 0;
+}
+.search_list_wrap .search_list table tr:nth-child(2) td {
+  padding-top: 1.9rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table td {
+  padding-bottom: 2.3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+.search_list_wrap .search_list table tr:nth-last-child(1) td {
+  padding-bottom: 1.7rem;
+}
+.search_list_wrap .obtain_data_btn {
+  display: flex;
+  justify-content: center;
+  border-bottom: 0.1rem solid #eaedf0;
+  padding-top: 2rem;
+  padding-bottom: 1.8rem;
+}
+.search_list_wrap .obtain_data_btn li {
+  border: 0.1rem solid #aaaaaa;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+}
+.search_list_wrap .obtain_data_btn li:not(:last-of-type) {
+  margin-right: 0.5rem;
+}
+.search_list_wrap .obtain_data_btn .current_page {
+  background-color: #6db6ff;
+  color: #fff;
+}
+
+/*# sourceMappingURL=search_list.css.map */
