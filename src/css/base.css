@@ -12,6 +12,17 @@ input,
 select,
 textarea {
   font-family: tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;
+  outline: none;
+  -webkit-outline: none;
+  border: 0 none;
+}
+body:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  -webkit-outline: none !important;
 }
 
 body {
@@ -69,12 +80,6 @@ a {
   -webkit-tap-highlight-color: transparent;
   color: #000;
   text-decoration: none;
-}
-
-input,
-textarea {
-  outline: none;
-  border: 0 none;
 }
 
 /**

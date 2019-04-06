@@ -15,6 +15,14 @@ input,
 select,
 textarea {
   font-family: tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+  outline: none;
+  -webkit-outline: none;
+  border: 0 none;
+
+  &:focus {
+    outline: none !important;
+    -webkit-outline: none !important;
+  }
 }
 
 body {
@@ -76,13 +84,6 @@ a {
   -webkit-tap-highlight-color: transparent;
   color: #000;
   text-decoration: none;
-}
-
-// 重置npuy 默认样式
-input,
-textarea {
-  outline: none;
-  border: 0 none;
 }
 
 /**
