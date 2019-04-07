@@ -129,9 +129,10 @@ $red: #f00;
         }
 
         img {
+          cursor: pointer;
           margin-left: .4rem;
           margin-right: .5rem;
-          vertical-align: middle;
+          // vertical-align: middle;
         }
 
         span {
@@ -196,6 +197,7 @@ $red: #f00;
           background-color: #6db6ff;
           border-radius: .5rem;
           color: #fff;
+          cursor: pointer;
           font-size: 1.6rem;
           margin: 0 auto;
           padding: .8rem 4.5rem;

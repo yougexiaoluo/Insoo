@@ -29,17 +29,17 @@
           <label for="userName" class="tl w5rem">用户名:</label><input type="text" id="userName" name="username">
         </div>
         <div class="pwd mb">
-          <label for="password" class="tl w5rem">密码:</label><input type="text" id="password" name="password">
+          <label for="password" class="tl w5rem">密码:</label><input type="password" id="password" name="password">
         </div>
         <div class="validate mb">
-          <label for="validate" class="tl w5rem">验证码:</label><input type="text" id="validate" name="yzm"><input onclick='return false' type="image" class="validate_code" src="../assets/images/validate.jpg"><span>看不清？ </span><a id="change" href="#">点击更换</a>
+          <label for="validate" class="tl w5rem">验证码:</label><input type="text" id="validate" name="yzm"><input onclick='return false' type="image" class="validate_code" src="../assets/images/validate.jpg"><span>看不清？ </span><a id="change" href="javascript:;">点击更换</a>
         </div>
         <div class="time">
           <lable class="tl w5rem">有效期:</lable>
           <input type="radio" id="month" checked name="status"><label for="month">一个月</label><input type="radio" id="week" name="status"><label for="week">周</label><input type="radio" id="day" name="status"><label for="day">一天</label><input type="radio" id="limited_time" name="status"><label for="limited_time">限时</label>
         </div>
         <div class="loginBtn">
-          <button type="submit">登录</button><a href="#">忘记密码？</a>
+          <button type="submit" onclick="return false">登录</button><a href="javascript:;">忘记密码？</a>
         </div>
       </form>
     </div>
