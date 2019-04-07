@@ -8,23 +8,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>登录页面</title>
   <link rel="stylesheet" href="../css/login.css">
-  <link rel="shortcut icon" href="Insoo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../Insoo.ico" type="image/x-icon">
 </head>
 
 <body>
+  <iframe id="header" src="./public/header.html" frameborder="0" scrolling="no"
+    style="display: block; width: 100rem; margin: 0 auto;"></iframe>
+  <iframe id="banner" src="./public/banner.html" frameborder="0" scrolling="no"
+    style="display: block; width: 100rem; margin: 0 auto;"></iframe>
+
   <!-- login Start -->
   <section class="login_wrap">
     <!-- 标题 -->
     <div class="login_title">
       <h3>我要转让</h3>
       <span>WO YAO ZHUAN RANG</span>
+      <base target="_blank">
     </div>
     <!-- login form表单 -->
     <div class="login">
       <form action="#" method="POST">
         <div class="btn_wrap">
           <button type="submit" onclick='return false' class="login_btn">点击登录</button>
-          <button type="submit" onclick='return false' class="register_btn">点击注册</button>
+          <button type="submit" onclick='return false' class="register_btn"><a href="https://yougexiaoluo.github.io/Insoo/src/Page/register.html">点击注册</a></button>
         </div>
         <div class="name mb">
           <label for="userName" class="tl w5rem">用户名:</label><input type="text" id="userName" name="username">
@@ -33,11 +39,15 @@
           <label for="password" class="tl w5rem">密码:</label><input type="password" id="password" name="password">
         </div>
         <div class="validate mb">
-          <label for="validate" class="tl w5rem">验证码:</label><input type="text" id="validate" name="yzm"><input onclick='return false' type="image" class="validate_code" src="../assets/images/validate.jpg"><span>看不清？ </span><a id="change" href="javascript:;">点击更换</a>
+          <label for="validate" class="tl w5rem">验证码:</label><input type="text" id="validate" name="yzm"><input
+            onclick='return false' type="image" class="validate_code" src="../assets/images/validate.jpg"><span>看不清？
+          </span><a id="change" href="javascript:;">点击更换</a>
         </div>
         <div class="time">
           <lable class="tl w5rem">有效期:</lable>
-          <input type="radio" id="month" checked name="status"><label for="month">一个月</label><input type="radio" id="week" name="status"><label for="week">周</label><input type="radio" id="day" name="status"><label for="day">一天</label><input type="radio" id="limited_time" name="status"><label for="limited_time">限时</label>
+          <input type="radio" id="month" checked name="status"><label for="month">一个月</label><input type="radio"
+            id="week" name="status"><label for="week">周</label><input type="radio" id="day" name="status"><label
+            for="day">一天</label><input type="radio" id="limited_time" name="status"><label for="limited_time">限时</label>
         </div>
         <div class="loginBtn">
           <button type="submit" onclick="return false">登录</button><a href="javascript:;">忘记密码？</a>
@@ -50,6 +60,8 @@
     </figure>
   </section>
   <!-- login End -->
+  <iframe id="footer" src="./public/footer.html" frameborder="0" scrolling="no"
+    style="display: block; width: 100rem; margin: 0 auto;"></iframe>
 </body>
-
+<script src='../js/public.js'></script>
 </html>

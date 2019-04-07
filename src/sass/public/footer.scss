@@ -1,0 +1,142 @@
+@charset 'utf-8';
+@import '../base.scss';
+// 页脚部分 Start
+.footer_wrap {
+  width: 100rem;
+  margin: 0 auto;
+
+  .layer { 
+    display: flex;
+    justify-content: space-between;
+    padding: 4.4rem 4.9rem 2.4rem 5.1rem;
+
+    // 底部导航
+    .layer_l {
+      width: 55.3rem;
+      font-family: 'Mycrosoft YaHei';
+
+      dl {
+        float: left;
+
+        &.introduce {
+          padding-right: 5.5rem;
+        }
+
+        &.help {
+          padding-right: 10.9rem;
+        }
+
+        &.win_win {
+          padding-right: 5.3rem;
+        }
+
+        dt {
+          font-size: 1.6rem;
+          font-weight: bold;
+          padding-bottom: 1.8rem;
+        }
+
+        dd {
+          font-size: 1.2rem;
+
+          &:not(:last-of-type) {
+            padding-bottom: 1.1rem;
+          }
+        }
+      }
+    }
+
+    .layer_r {
+      // width: 27.8rem;
+
+      // 联系方式 以及投诉方式
+      .layer_r_t {
+        display: flex;
+        justify-content: space-between;
+
+        // 电话图标
+        .telepho_icon {
+          .icon-telephone {
+            color: #1a294b;
+            font-size: 4.3rem;
+          }
+        }
+
+        //电话热线
+        .r_x {
+          margin: 0 .6rem;
+
+          h5 {
+            font-family: 'Mycrosoft YaHei';
+            font-size: 1.6rem;
+
+            &:first-child {
+              letter-spacing: .35rem;
+            }
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        //投诉电话
+        .t_s {
+          font-size: 1rem;
+          vertical-align: middle;
+
+          .gz_wrap {
+            text-align: right;
+            margin-top: 1.3rem;
+
+            i {
+              color: #f43847;
+              font-size: 1.2rem;
+
+            }
+
+            .icon-guanzhu {
+              color: #52bff1;
+            }
+
+            a {
+              border-radius: .3rem;
+              background-color: #f43847;
+              color: #fff;
+              padding: .2rem .5rem;
+
+              &:last-child {
+                background-color: #52bff1;
+              }
+            }
+          }
+        }
+      }
+
+      // 二维码
+      .layer_r_b {
+        figure {
+          margin-top: 1rem;
+
+          img {
+            margin-right: 1.4rem;
+            vertical-align: bottom;
+          }
+
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    // 联系方式
+  }
+
+  // 版权
+  .copyright_wrap {
+    background-color: #6db6ff;
+    font-size: 1.2rem;
+    padding-top: 4.3rem;
+    padding-bottom: 1.5rem;
+
+  }
+}

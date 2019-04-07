@@ -1,0 +1,242 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+  /* 1 */
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;
+  outline: none;
+  -webkit-outline: none;
+  border: 0 none;
+}
+body:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  -webkit-outline: none !important;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+body,
+html,
+dt,
+dl,
+dd,
+figure,
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+pre,
+textarea,
+table,
+tr,
+td,
+th {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+  text-decoration: none;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure,
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer {
+  display: block;
+}
+
+/*
+  工具类  Start
+*/
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tc {
+  text-align: center;
+}
+
+.vt {
+  vertical-align: top;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.vb {
+  vertical-align: bottom;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*
+  工具类  End
+*/
+.banner_wrap {
+  width: 100rem;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.banner_wrap .banner_list {
+  width: 100rem;
+  height: 40rem;
+  position: relative;
+  background-image: url("../../assets/images/banner_01.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+}
+.banner_wrap .banner_list span {
+  color: #395571;
+  font-size: 3.2rem;
+  letter-spacing: 7px;
+  position: absolute;
+  top: 13.3rem;
+  left: 42.7rem;
+}
+.banner_wrap .banner_list span:first-child {
+  position: absolute;
+  top: 8.2rem;
+  left: 28.2rem;
+}
+.banner_wrap .banner_list span:last-child {
+  position: absolute;
+  top: 16.2rem;
+  left: 58.7rem;
+}
+.banner_wrap .banner_list_btn {
+  display: flex;
+  position: absolute;
+  bottom: 0.7rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.banner_wrap .banner_list_btn li {
+  flex: 1 0 auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #395674;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.banner_wrap .banner_list_btn li.selected {
+  background-color: #7f5819;
+}
+.banner_wrap .banner_list_btn li.selected + li {
+  margin: 0 1rem 0 1.2rem;
+}
+
+/*# sourceMappingURL=banner.css.map */

@@ -1,0 +1,283 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+  /* 1 */
+  font-family: sans-serif;
+  font-size: 62.5%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;
+  outline: none;
+  -webkit-outline: none;
+  border: 0 none;
+}
+body:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  -webkit-outline: none !important;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+body,
+html,
+dt,
+dl,
+dd,
+figure,
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+pre,
+textarea,
+table,
+tr,
+td,
+th {
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+  border: none;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  color: #000;
+  text-decoration: none;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+figure,
+header,
+nav,
+main,
+section,
+aside,
+article,
+footer {
+  display: block;
+}
+
+/*
+  工具类  Start
+*/
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.tl {
+  text-align: left;
+}
+
+.tr {
+  text-align: right;
+}
+
+.tc {
+  text-align: center;
+}
+
+.vt {
+  vertical-align: top;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.vb {
+  vertical-align: bottom;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+/*
+  工具类  End
+*/
+.footer_wrap {
+  width: 100rem;
+  margin: 0 auto;
+}
+.footer_wrap .layer {
+  display: flex;
+  justify-content: space-between;
+  padding: 4.4rem 4.9rem 2.4rem 5.1rem;
+}
+.footer_wrap .layer .layer_l {
+  width: 55.3rem;
+  font-family: "Mycrosoft YaHei";
+}
+.footer_wrap .layer .layer_l dl {
+  float: left;
+}
+.footer_wrap .layer .layer_l dl.introduce {
+  padding-right: 5.5rem;
+}
+.footer_wrap .layer .layer_l dl.help {
+  padding-right: 10.9rem;
+}
+.footer_wrap .layer .layer_l dl.win_win {
+  padding-right: 5.3rem;
+}
+.footer_wrap .layer .layer_l dl dt {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-bottom: 1.8rem;
+}
+.footer_wrap .layer .layer_l dl dd {
+  font-size: 1.2rem;
+}
+.footer_wrap .layer .layer_l dl dd:not(:last-of-type) {
+  padding-bottom: 1.1rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_wrap .layer .layer_r .layer_r_t .telepho_icon .icon-telephone {
+  color: #1a294b;
+  font-size: 4.3rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t .r_x {
+  margin: 0 0.6rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t .r_x h5 {
+  font-family: "Mycrosoft YaHei";
+  font-size: 1.6rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t .r_x h5:first-child {
+  letter-spacing: 0.35rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t .r_x p {
+  font-size: 1rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t .t_s {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+.footer_wrap .layer .layer_r .layer_r_t .t_s .gz_wrap {
+  text-align: right;
+  margin-top: 1.3rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t .t_s .gz_wrap i {
+  color: #f43847;
+  font-size: 1.2rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t .t_s .gz_wrap .icon-guanzhu {
+  color: #52bff1;
+}
+.footer_wrap .layer .layer_r .layer_r_t .t_s .gz_wrap a {
+  border-radius: 0.3rem;
+  background-color: #f43847;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+}
+.footer_wrap .layer .layer_r .layer_r_t .t_s .gz_wrap a:last-child {
+  background-color: #52bff1;
+}
+.footer_wrap .layer .layer_r .layer_r_b figure {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+.footer_wrap .layer .layer_r .layer_r_b figure img {
+  margin-right: 1.4rem;
+  vertical-align: bottom;
+}
+.footer_wrap .copyright_wrap {
+  background-color: #6db6ff;
+  font-size: 1.2rem;
+  padding-top: 4.3rem;
+  padding-bottom: 1.5rem;
+}
+
+/*# sourceMappingURL=footer.css.map */
