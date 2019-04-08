@@ -40,7 +40,6 @@ $spbw: space-between;
       justify-content: $spbw;
 
       li {
-        flex-shrink: 0;
         background-color: #f2f2f2;
         box-sizing: $boxs;
         text-align: $center;
@@ -130,7 +129,6 @@ $spbw: space-between;
       flex-wrap: wrap;
 
       li {
-        flex-shrink: 0;
         width: 29.5rem;
         text-align: $center;
 
@@ -141,7 +139,6 @@ $spbw: space-between;
           border: 1px solid #000;
           overflow: $hidden;
           font-size: 0;
-          // line-height: 0;
 
           // 使用这种方式添加背景，没能实现鼠标移入触发：hover伪类动画效果
           // @include setBgImage('../assets/images/case_bg_01.jpg', no-repeat, 0 0, cover);
@@ -161,7 +158,7 @@ $spbw: space-between;
           }
 
           &:hover img {
-            // transform: scale(1.2);
+            transform: scale(1.1);
           }
         }
 
@@ -183,7 +180,7 @@ $spbw: space-between;
           font-size: 1.6rem;
           font-weight: bold;
 
-          // :hover 
+          // :hover  
           @include Hover;
         }
       }

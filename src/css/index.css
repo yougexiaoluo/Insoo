@@ -227,7 +227,6 @@ footer {
   justify-content: space-between;
 }
 .c_container .about_wrap .about_dec li {
-  flex-shrink: 0;
   background-color: #f2f2f2;
   box-sizing: border-box;
   text-align: center;
@@ -320,7 +319,6 @@ footer {
   flex-wrap: wrap;
 }
 .c_container .case_wrap .case_list li {
-  flex-shrink: 0;
   width: 29.5rem;
   text-align: center;
 }
@@ -337,6 +335,9 @@ footer {
   width: 29.5rem;
   height: 21rem;
   transition: all 0.5s ease-in-out;
+}
+.c_container .case_wrap .case_list li .bg:hover img {
+  transform: scale(1.1);
 }
 .c_container .case_wrap .case_list li figcaption {
   font-size: 1.2rem;
