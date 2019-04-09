@@ -1,11 +1,12 @@
 @charset 'utf-8';
 @import '../base.scss';
+
 // 页脚部分 Start
 .footer_wrap {
   width: 100rem;
   margin: 0 auto;
 
-  .layer { 
+  .layer {
     display: flex;
     justify-content: space-between;
     padding: 4.4rem 4.9rem 2.4rem 5.1rem;
@@ -15,7 +16,7 @@
       width: 55.3rem;
       font-family: 'Mycrosoft YaHei';
 
-      dl {
+      div {
         float: left;
 
         &.introduce {

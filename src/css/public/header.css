@@ -250,11 +250,19 @@ header nav ul li:hover:after {
 }
 header nav .search {
   position: relative;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 header nav .search input {
   box-sizing: border-box;
-  border: 0.1rem solid #000;
-  padding: 0.4rem 2.7rem 0.3rem 0.8rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
+  padding: 0.4rem 2.5rem 0.3rem 0.8rem;
+}
+header nav .search input:hover {
+  border-color: black;
+  filter: alpha(opacity=100);
 }
 header nav .search i {
   position: absolute;
@@ -262,6 +270,9 @@ header nav .search i {
   top: 0.7rem;
   font-size: 1.4rem;
   cursor: pointer;
+}
+header nav .search i:hover {
+  color: #6db6ff;
 }
 
 /*# sourceMappingURL=header.css.map */

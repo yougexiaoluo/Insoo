@@ -197,27 +197,27 @@ footer {
   width: 55.3rem;
   font-family: "Mycrosoft YaHei";
 }
-.footer_wrap .layer .layer_l dl {
+.footer_wrap .layer .layer_l div {
   float: left;
 }
-.footer_wrap .layer .layer_l dl.introduce {
+.footer_wrap .layer .layer_l div.introduce {
   padding-right: 5.5rem;
 }
-.footer_wrap .layer .layer_l dl.help {
+.footer_wrap .layer .layer_l div.help {
   padding-right: 10.9rem;
 }
-.footer_wrap .layer .layer_l dl.win_win {
+.footer_wrap .layer .layer_l div.win_win {
   padding-right: 5.3rem;
 }
-.footer_wrap .layer .layer_l dl dt {
+.footer_wrap .layer .layer_l div dt {
   font-size: 1.6rem;
   font-weight: bold;
   padding-bottom: 1.8rem;
 }
-.footer_wrap .layer .layer_l dl dd {
+.footer_wrap .layer .layer_l div dd {
   font-size: 1.2rem;
 }
-.footer_wrap .layer .layer_l dl dd:not(:last-of-type) {
+.footer_wrap .layer .layer_l div dd:not(:last-of-type) {
   padding-bottom: 1.1rem;
 }
 .footer_wrap .layer .layer_r .layer_r_t {

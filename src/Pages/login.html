@@ -30,24 +30,38 @@
       <form action="#" method="POST">
         <div class="btn_wrap">
           <button type="submit" onclick='return false' class="login_btn">点击登录</button>
-          <button type="submit" onclick='return false' class="register_btn"><a href="https://yougexiaoluo.github.io/Insoo/src/Page/register.html">点击注册</a></button>
+          <button type="submit" class="register_btn"><a
+              href="https://yougexiaoluo.github.io/Insoo/src/Pages/register.html">点击注册</a></button>
         </div>
         <div class="name mb">
-          <label for="userName" class="tl w5rem">用户名:</label><input type="text" id="userName" name="username">
+          <label for="userName" class="tl w5rem">用户名 :</label><input type="text" id="userName" name="username"
+            placeholder="输入用户名">
         </div>
         <div class="pwd mb">
-          <label for="password" class="tl w5rem">密码:</label><input type="password" id="password" name="password">
+          <label for="password" class="tl w5rem">密码 :</label><input type="password" id="password" name="password"
+            placeholder="输入密码">
         </div>
         <div class="validate mb">
-          <label for="validate" class="tl w5rem">验证码:</label><input type="text" id="validate" name="yzm"><input
+          <label for="validate" class="tl w5rem">验证码 :</label><input type="text" id="validate" name="yzm"><input
             onclick='return false' type="image" class="validate_code" src="../assets/images/validate.jpg"><span>看不清？
           </span><a id="change" href="javascript:;">点击更换</a>
         </div>
         <div class="time">
-          <lable class="tl w5rem">有效期:</lable>
-          <input type="radio" id="month" checked name="status"><label for="month">一个月</label><input type="radio"
-            id="week" name="status"><label for="week">周</label><input type="radio" id="day" name="status"><label
-            for="day">一天</label><input type="radio" id="limited_time" name="status"><label for="limited_time">限时</label>
+          <span>
+            <lable class="tl w5rem">有效期 :</lable>
+          </span>
+          <span>
+            <input type="radio" id="month" checked name="status"><label for="month">一个月</label>
+          </span>
+          <span>
+            <input type="radio" id="week" name="status"><label for="week">一周</label>
+          </span>
+          <span>
+            <input type="radio" id="day" name="status"><label for="day">一天</label>
+          </span>
+          <span>
+            <input type="radio" id="limited_time" name="status"><label for="limited_time">限时</label>
+          </span>
         </div>
         <div class="loginBtn">
           <button type="submit" onclick="return false">登录</button><a href="javascript:;">忘记密码？</a>
@@ -64,4 +78,5 @@
     style="display: block; width: 100rem; margin: 0 auto;"></iframe>
 </body>
 <script src='../js/public.js'></script>
+
 </html>

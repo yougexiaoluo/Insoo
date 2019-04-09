@@ -1,7 +1,4 @@
 如何使用@function 写一个逻辑css 样式
-
-
-
 @function style() {
   @return {
     background-color: red;
@@ -9,6 +6,8 @@
 }
 
 1.使用表格table时需要先将边框合并，重置便单元格与单元格之间的距离，以及内填充
+2.重置em标签默认斜体 -- 字体类型 font-style: normal; font-style: normal;
 
-2.重置em标签默认斜体 -- 字体类型 font-style: normal;
-          font-style: normal;
+搜索框：
+  一般都会在最外层添加一个form标签
+  

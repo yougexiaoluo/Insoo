@@ -14,6 +14,7 @@ $flex: flex;
   border-bottom: .1rem solid #b6daff;
   padding-bottom: 5.5rem;
   margin: 0 auto;
+
   // 标题
   .login_title {
     display: inline-block;
@@ -57,11 +58,15 @@ $flex: flex;
     margin-bottom: 2.6rem;
   }
 
-  .w5rem {
+  // lable
+  label.w5rem {
+    // float: left;
+    // 若将块级元素转变成行内块元素，不再具备块级元素某些特性
+    display: inline-block;
     width: 5rem;
-    display: inline-block
+    text-align: left;
+    font-size: 1.2rem;
   }
-
 
   // form表单
   .login {
@@ -77,15 +82,15 @@ $flex: flex;
 
         button {
           border-radius: .3rem;
+          background-color: #eee;
           cursor: pointer;
           font-size: 1.4rem;
           padding: .5rem 1.8rem;
+
           a {
             display: block;
-            width: 100%;
-            height: 100%;
-          }
 
+          }
 
           &.login_btn {
             background-color: #b3d9ff;
@@ -94,6 +99,10 @@ $flex: flex;
 
           &.register_btn {
             background-color: #eee;
+          }
+
+          &:hover {
+            background-color: #b3d9ff;
           }
         }
       }
@@ -106,10 +115,6 @@ $flex: flex;
         padding: .2rem .4rem;
       }
 
-      [type=radio] {
-        margin: 0 1rem;
-        vertical-align: top;
-      }
 
       #userName,
       #password {
@@ -129,6 +134,10 @@ $flex: flex;
 
         a#change {
           color: #c10000;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         // 验证码图片
@@ -137,6 +146,19 @@ $flex: flex;
           vertical-align: bottom;
           padding: 0;
           margin: 0 .7rem 0 .4rem;
+        }
+      }
+
+      // 单选按钮
+      .time {
+        font-size: 0;
+
+        [type=radio] {
+          margin: 0 .5rem;
+          vertical-align: top;
+        }
+        span {
+          font-size: 1.2rem;
         }
       }
 
@@ -149,13 +171,23 @@ $flex: flex;
           border-radius: .3rem;
           background-color: #b3d9ff;
           color: #fff;
+          cursor: pointer;
           font-size: 1.4rem;
+          font-weight: bold;
           padding: .5rem 3.1rem .6rem 3.4rem;
           margin-right: .7rem;
+
+          &:hover {
+            background-color: #7bb6f1;
+          }
         }
 
         a {
           color: #b30000;
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }

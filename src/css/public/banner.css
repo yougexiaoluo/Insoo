@@ -184,9 +184,12 @@ footer {
 /*
   工具类  End
 */
+body {
+  height: 40rem;
+}
+
 .banner_wrap {
   width: 100rem;
-  height: 40rem;
   overflow: hidden;
   margin: 0 auto;
   position: relative;

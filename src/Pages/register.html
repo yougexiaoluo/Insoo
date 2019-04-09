@@ -35,35 +35,35 @@
       <form action="#" method="POST">
         <div class="user_w">
           <label for="username">用户名:</label>
-          <input type="text" name="username" id="username">
+          <input type="text" name="username" id="username" placeholder="请输入用户名">
           <div class="tip">
             <span>*</span>(可以使用中文，但禁止除[@][.]以外的特殊符号)
           </div>
         </div>
         <div class="company_w">
           <label for="companyname">公司名称:</label>
-          <input type="text" name="c_n" id="companyname">
+          <input type="text" name="c_n" id="companyname" placeholder="请输入公司名称">
           <div class="tip">
             <span>*</span>
           </div>
         </div>
         <div class="pass_w">
           <label for="password">登录密码:</label>
-          <input type="password" name="pwd" id="password">
+          <input type="password" name="pwd" id="password" placeholder="请输入用户密码">
           <div class="tip">
             <span>*</span>
           </div>
         </div>
         <div class="confirm_w">
           <label for="confirm_pwd">确认密码:</label>
-          <input type="password" name="c_pwd" id="confirm_pwd">
+          <input type="password" name="c_pwd" id="confirm_pwd" placeholder="再次输入密码">
           <div class="tip">
             <span>*</span>×两次输入密码不一致
           </div>
         </div>
         <div class="email_w">
           <label for="email">电子邮箱:</label>
-          <input type="email" name="email_v" id="email">
+          <input type="email" name="email_v" id="email" placeholder="xxx@qq.com">
           <div class="tip">
             <span>*</span>(每个电子邮箱只能注册一个账号)
           </div>
@@ -81,16 +81,16 @@
         </div>
         <div class="answer_w">
           <label for="answer_pro">问题答案:</label>
-          <input type="text" name="answer_p" id="answer_pro">
+          <input type="text" name="answer_p" id="answer_pro" placeholder="请输入答案">
         </div>
         <div class="sex_w">
           <label class="sex_lb">性别:</label>
-          <input type="radio" name="sex" id="boy">
-          <label for="boy">男</label>
-          <input type="radio" name="sex" id="girl">
-          <label for="girl">女</label>
-          <input type="radio" name="sex" id="secrecy" checked>
-          <label for="secrecy">保密</label>
+          <span><input type="radio" name="sex" id="boy"></span>
+          <span><label for="boy">男</label></span>
+          <span><input type="radio" name="sex" id="girl"></span>
+          <span><label for="girl">女</label></span>
+          <span><input type="radio" name="sex" id="secrecy" checked></span>
+          <span><label for="secrecy">保密</label></span>
         </div>
         <div class="vld_w">
           <label for="vld_v">验证码:</label>
@@ -133,4 +133,5 @@
 </body>
 <script src='../js/public.js'></script>
 <script src="../js/register.js"></script>
+
 </html>

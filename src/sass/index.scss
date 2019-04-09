@@ -8,13 +8,13 @@ $colorW: #fff;
 $boxs: border-box;
 $auto: 0 auto;
 $center: center;
-$rgba28: rgba(0, 0, 0, 28%);
+$rgba28: rgba(0, 0, 0, .5);
 $flex: flex;
 $hidden: hidden;
 $spbw: space-between;
- 
+
 // 公共变量 Emd
- 
+
 
 // 内容区域 Start
 .c_container {
@@ -32,11 +32,11 @@ $spbw: space-between;
     margin: $auto;
     padding: 0rem 5rem 8rem 5.1rem;
     // 小标题
-    @include publicM(#000, 2.6rem, 2.1rem);
+    @include publicM(#fff, 2.6rem, 2.1rem, -1.1rem);
 
     // 介绍
     .about_dec {
-      display: $flex; 
+      display: $flex;
       justify-content: $spbw;
 
       li {
@@ -60,7 +60,7 @@ $spbw: space-between;
           margin-left: 2rem;
           margin-right: 2.1rem;
         }
-  
+
         &.right {
           width: 27rem;
           padding-left: $size12;
@@ -95,8 +95,8 @@ $spbw: space-between;
         p {
           color: #999;
           font-size: 1.2rem;
-          line-height: 2.5rem;
-          text-align: left;
+          line-height: 2.4;
+          text-align: justify;
         }
       }
     }
@@ -107,19 +107,19 @@ $spbw: space-between;
   .case_wrap {
     position: relative;
     width: $width;
-    margin: 2.2rem auto 0;
+    margin: $auto;
     @include setPadding(0rem, 5rem, 0rem, 5.1rem);
     // 小标题
-    @include publicM(#000, 3.4rem, 3.2rem);
+    @include publicM(#fff, 2.6rem, 3.2rem, -1.1rem);
 
     // 特殊情况特殊处理
-    .title {
-      position: absolute;
-      top: -(14.5rem/2);
-      left: 50%;
-      transform: translateX(-50%);
-      margin: 0;
-    }
+    // .title {
+    // position: absolute;
+    // top: -(14.5rem/2);
+    // left: 50%;
+    // transform: translateX(-50%);
+    // margin: 0;
+    // }
 
     // 每个项目的样式
     .case_list {
@@ -171,17 +171,20 @@ $spbw: space-between;
 
         a {
           display: inline-block;
-          width: 13.5rem;
-          padding-top: .6rem;
-          padding-bottom: .5rem;
+          // width: 13.5rem;
+          @include setPadding(.6rem, 3.1rem, .5rem, 3.1rem);
           margin: 0rem auto 4.6rem auto;
           background-color: #6db6ff;
+          border-radius: 5px;
           color: $colorW;
           font-size: 1.6rem;
           font-weight: bold;
-
           // :hover  
           @include Hover;
+
+          &:active {
+            color: #f1f1f1;
+          }
         }
       }
     }
@@ -192,11 +195,11 @@ $spbw: space-between;
 
   .friendly_link_wrap {
     width: $width;
-    // height: 30.5rem;
+    height: 30.5rem;
     @include setBgImage('../assets/images/link_bg.jpg', no-repeat, 0 0, 100% 100%);
     overflow: $hidden;
     margin: $auto;
-    padding-bottom: 12.2rem;
+    // padding-bottom: 12.2rem;
     position: relative;
 
     &:before {
@@ -210,10 +213,10 @@ $spbw: space-between;
     }
 
     // 标题
-    @include publicM($colorW, 4.3rem, 4.3rem);
+    @include publicM(transparent, 3.3rem, 4.3rem, -1.4rem);
 
-    .title {
-      position: relative;
+    .title_wrap {
+      color: #fff;
     }
 
     .links {
